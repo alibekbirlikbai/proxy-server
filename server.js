@@ -7,7 +7,8 @@ app.use(cors());
 
 // Обработчик для корневого URL
 app.get('/', (req, res) => {
-    res.send('Прокси-сервер работает. Для получения файла посетите /get-file-content');
+    // Перенаправляем запрос на /get-file-content
+    res.redirect('/get-file-content');
 });
 
 // Обработчик для получения содержимого файла
