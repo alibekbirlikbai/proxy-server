@@ -12,6 +12,7 @@ app.get('/get-file-content', async (req, res) => {
     const data = await response.text();
 
     // Github API accessToken
+    console.log(data)
     res.send(data);
   } catch (error) {
     console.error('Ошибка при чтении файла:', error);
